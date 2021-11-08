@@ -1,0 +1,37 @@
+{
+  "baseBranches": [
+    "9.x",
+    "8.x",
+    "9.x-advanced",
+    "8.x-advanced",
+    "9.x-postgres",
+    "9.x-php8"
+  ],
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["patch", "minor"],
+      "packageNames": [
+        "drupal/core-dev-pinned",
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold",
+        "drupal/core-project-message"
+      ],
+      "groupName": "Drupal Core"
+    },
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["major"],
+      "packageNames": [
+        "drupal/core-dev-pinned",
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold",
+        "drupal/core-project-message"
+      ],
+      "enabled": false
+    }
+  ]
+}

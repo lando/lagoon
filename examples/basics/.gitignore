@@ -1,1 +1,6 @@
-drupal
+vendor
+web
+drush
+/.drush-lock-update
+/.editorconfig
+/.gitattributes
