@@ -1,4 +1,4 @@
-name: lando-lagoon-basics
+name: lando-lagoon-drupal9
 recipe: lagoon
 config:
   flavor: drupal

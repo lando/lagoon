@@ -1,6 +1,7 @@
 vendor
 web
 drush
+drupal
 /.drush-lock-update
 /.editorconfig
 /.gitattributes

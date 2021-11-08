@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/basics
+          - examples/drupal9
         lando-versions:
           - edge
         os:
