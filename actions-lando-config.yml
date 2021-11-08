@@ -1,0 +1,14 @@
+# Disable the "core" lagoon plugins
+disablePlugins:
+  - lando-lagoon
+
+# Make sure we are dogfooding this plugin for testing purposes
+plugins:
+  "@lando/lagoon": /home/runner/work/lagoon/lagoon
+
+# Disable metrics reporting
+stats:
+  - report: false
+    url: https://metrics.lando.dev
+
+
