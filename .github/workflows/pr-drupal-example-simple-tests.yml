@@ -1,4 +1,4 @@
-name: Basic Tests
+name: Drupal Simple Example Tests
 
 on:
   pull_request:

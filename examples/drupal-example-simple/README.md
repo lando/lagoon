@@ -16,7 +16,7 @@ lando poweroff
 
 # Should get the the drupal example simple repo
 rm -rf drupal
-git clone git@github.com:amazeeio/drupal-example-simple.git drupal
+git clone https://github.com/amazeeio/drupal-example-simple.git drupal
 echo -e "\nplugins:\n  \"@lando/lagoon/\": ./../../" >> .lando.yml
 
 # Should start up our lagoon drupal example simple site successfully
