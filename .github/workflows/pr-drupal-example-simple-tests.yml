@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/drupal9
+          - examples/drupal-example-simple
         lando-versions:
           - edge
         os:
@@ -50,8 +50,6 @@ jobs:
         run: |
           lando version
           lando config --path plugins | grep lagoon | grep /home/runner/work/lagoon/lagoon || echo "::error:: Not dogfooding this plugin correctly! "
-          cd ${{ matrix.leia-tests }}
-          lando config --path plugins | grep lagoon | grep dir | grep /home/runner/work/lagoon/lagoon || echo "::error:: Not dogfooding this plugin correctly! "
 
       # This block should eventually become use lando/actions-leia@v2
       # @NOTE? Do we want a way for our leia-action to configure apparmor since
