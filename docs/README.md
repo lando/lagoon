@@ -22,7 +22,7 @@ mkdir -p ~/.lando/plugins
 
 # Install plugin
 # NOTE: Modify the "yarn add @lando/lagoon" line to install a particular version eg
-# yarn add @lando/platform@0.5.2
+# yarn add @lando/lagoon@0.5.2
 docker run --rm -it -v ${HOME}/.lando/plugins:/plugins -w /tmp node:14-alpine sh -c \
   "yarn init -y \
   && yarn add @lando/lagoon --production --flat --no-default-rc --no-lockfile --link-duplicates \
@@ -45,7 +45,7 @@ Clone a project down from Lagoon.
 mkdir myproject && cd myproject
 
 # Clone down code from Lagoon
-lando init --source
+lando init --source lagoon
 
 # Start the project up
 lando start
@@ -58,7 +58,7 @@ Once your project is running you can access [relevant tooling commands](https://
 
 
 ```yaml
-name: lagoon-drupal8
+name: lagoon-drupal9
 recipe: lagoon
 ```
 
