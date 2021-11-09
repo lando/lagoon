@@ -1,4 +1,4 @@
-Lagoon Drupal 9 Example
+Lagoon Drupal Example Simple
 =======================
 
 This example exists primarily to test the following documentation:
@@ -14,20 +14,13 @@ Run the following commands to get up and running with this example.
 # Should poweroff
 lando poweroff
 
-# Should initialize the lagoon drupal example
-rm -rf drupal && mkdir -p drupal && cd drupal
-mkdir -p ~/.ssh
-echo "$LAGOON_KEY" | base64 -d > ~/.ssh/id_lagoon
-chmod 600 ~/.ssh/id_lagoon
-lando init --source lagoon --lagoon-auth ~/.ssh/id_lagoon --lagoon-site drupal9-lando
+# Should get the the drupal example simple repo
+rm -rf drupal
+git clone git@github.com:amazeeio/drupal-example-simple.git drupal
 
-# Should start up our lagoon drupal 9 site successfully
+# Should start up our lagoon drupal example simple site successfully
 cd drupal
 lando start
-
-# Should pull down database and files for our site
-cd drupal
-# lando pull --database main --files main
 ```
 
 Verification commands
@@ -43,11 +36,11 @@ lando drush cr -y
 lando drush status | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9lando | grep Up | grep drupal9lando_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9lando | grep Up | grep drupal9lando_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9lando | grep Up | grep drupal9lando_mailhog_1
-docker ps --filter label=com.docker.compose.project=drupal9lando | grep Up | grep drupal9lando_php_1
-docker ps --filter label=com.docker.compose.project=drupal9lando | grep Up | grep drupal9lando_cli_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9examplesimple_nginx_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9examplesimple_mariadb_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9examplesimple_mailhog_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9examplesimple_php_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9examplesimple_cli_1
 
 # Should ssh against the cli container by default
 cd drupal
@@ -55,7 +48,7 @@ lando ssh -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
 cd drupal
-lando ssh -c "env" | grep LAGOON_ROUTE | grep https://drupal9-lando.lndo.site
+lando ssh -c "env" | grep LAGOON_ROUTE | grep https://drupal9-example-simple.lndo.site
 lando ssh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should have composer
