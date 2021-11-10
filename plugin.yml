@@ -7,13 +7,13 @@ legacy: true
 
 # This is just metadata that something else can use to understand how the docs are organized
 docs:
-  # This is the tag we should use when connecting platform.sh content together eg showing guides on the main
-  # platform.sh recipe docs
-  tag: platform.sh
+  # This is the tag we should use when connecting Lagoon content together eg showing guides on the main
+  # Lagoon recipe docs
+  tag: lagoon
 
   # This gets added to the lando/lando docs guides.json
   guides:
-    title: Platform.sh
+    title: Lagoon
     collapsable: true
     # Note that these are "source/destination" pairs the source is relative to the root of this
     # repo and the desintation is relative to docs/guides in the main lando repo
