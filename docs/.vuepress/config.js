@@ -13,7 +13,7 @@ module.exports = {
   theme: '@lando/vuepress-theme-lando-docs',
   themeConfig: {
     logo: '/images/logo-pink-small.png',
-    repo: 'lando/platformsh',
+    repo: 'lando/lagoon',
     docsDir: 'docs',
     docsBranch: 'main',
     sponsors: yaml.load(fs.readFileSync(path.resolve(__dirname, 'public') + '/api/sponsors.yml', 'utf8')),

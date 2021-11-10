@@ -24,8 +24,12 @@ The high level goals of the integration are straightforward:
 This allow users to run their Lagoon projects locally using the same images, build processes, configuration, etc as they do on Lagoon itself. This means that a Landofile using the `lagoon` recipe can be be something simple like this:
 
 ```yaml
-name: lando-d8
+name: lando-lagoon
 recipe: lagoon
+config:
+  flavor: drupal
+  build:
+    - composer install
 ```
 
 The implication here is that Lando will instead look and use the `lagoon` configuration files, including its `docker-compose` files instead of its own mechanisms. You can, however, still use the Landofile for additional power you may need exclusively in the local context.
@@ -111,7 +115,7 @@ Generally, the lando Lagoon services are directly configured from the correspond
 
 It's easiest to develop by spinnning up the Lagoon D9 example directly in the Lando codebase
 
-* [Drupal 9](https://github.com/lando/lando/tree/master/examples/lagoon-drupal9)
+* [Drupal](https://github.com/lando/lando/tree/master/examples/drupal)
 
 ```bash
 # This assumes you have already installed lando from source and are in its root directory
@@ -159,7 +163,7 @@ These tests can then be run with `yarn test:unit`.
 
 Func tests are made by just adding more entries to each examples README. This uses our made-just-for-Lando testing framework [Leia](https://github.com/lando/leia). See below for our current lagoon tests:
 
-* [Drupal 9](https://github.com/lando/lando/tree/master/examples/lagoon-drupal9)
+* [Drupal](https://github.com/lando/lando/tree/master/examples/drupal)
 
 These are then run by CircleCI. While you _can_ run all the func test locally this can take a LONG time. If you decide you want to do that we recommend you generate the test files and then invoke the tests for just one example.
 
