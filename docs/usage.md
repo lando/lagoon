@@ -184,7 +184,7 @@ lando yarn              Runs yarn commands
 
 Note that you can define your own commands by using out [tooling framework](https://docs.lando.dev/config/tooling.md). Also check out the guides for the powerful [DB Export](https://docs.lando.dev/guides/db-export.md) and [DB Import](https://docs.lando.dev/guides/db-import.md) commands.
 
-Also, check out the [Lagoon CLI Docs](https://amazeeio.github.io/lagoon-cli/commands/lagoon/) for more information on using `lando lagoon`.
+Also, check out the [Lagoon CLI Docs](https://uselagoon.github.io/lagoon-cli/commands/lagoon/) for more information on using `lando lagoon`.
 
 ### Mailhog
 
