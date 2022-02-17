@@ -1,27 +1,51 @@
-const {path} = require('@vuepress/utils');
-const yaml = require('js-yaml');
-const fs = require('fs');
-
 module.exports = {
   lang: 'en-US',
   title: 'Lando',
-  description: 'Lando Lagoon Plugin Documentation',
+  description: 'Lando is the best local development environment option for Lagoon, the fastest way to build modern web apps.',
+  base: '/lagoon/',
   head: [
-    ['link', {rel: 'icon', href: '/favicon.ico'}],
-    ['link', {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Poppins:700|Source+Sans+Pro&display=swap'}],
+    ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1'}],
+    ['link', {rel: 'icon', href: '/lagoon/favicon.ico', size: 'any'}],
+    ['link', {rel: 'icon', href: '/lagoon/favicon.svg', type: 'image/svg+xml'}],
+    ['link', {rel: 'preconnect', href: '//fonts.googleapis.com'}],
+    ['link', {rel: 'preconnect', href: '//fonts.gstatic.com', crossorigin: true}],
+    ['link', {rel: 'stylesheet', href: '//fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap'}],
   ],
-  theme: '@lando/vuepress-theme-lando-docs',
+  theme: '@lando/vuepress-theme-default-plus',
   themeConfig: {
-    logo: '/images/logo-pink-small.png',
-    repo: 'lando/lagoon',
+    landoDocs: true,
+    logo: '/images/icon.svg',
     docsDir: 'docs',
     docsBranch: 'main',
-    sponsors: yaml.load(fs.readFileSync(path.resolve(__dirname, 'public') + '/api/sponsors.yml', 'utf8')),
-    // showSponsors: ['platformsh'],
-    showCarbonAds: true,
-    showSponsors: true,
-    navbar: [
-      {text: 'Getting Started', link: 'https://docs.lando.dev/basics/'},
+    repo: 'lando/lagoon',
+    sidebarHeader: {
+      enabled: true,
+      title: 'Lagoon Plugin',
+      icon: '/images/lagoon-icon.png',
+    },
+    sidebar: [
+      {
+        text: 'Overview',
+        link: '/index.md',
+      },
+      '/getting-started.md',
+      '/config.md',
+      '/tooling.md',
+      '/sync.md',
+      {
+        text: 'Guides',
+        collapsible: true,
+        children: [
+          {
+            text: 'Externally accessing services',
+            link: '/external-access.md',
+          },
+        ],
+      },
+      '/support.md',
+      {text: 'Examples', link: 'https://github.com/lando/lagoon/tree/main/examples'},
+      {text: 'Release Notes', link: 'https://github.com/lando/lagoon/releases'},
+      '/development.md',
     ],
   },
 };
