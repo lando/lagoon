@@ -3,7 +3,7 @@ title: Lagoon Lando Plugin
 description: The best local development option for Lagoon a Docker Build and Deploy System for OpenShift & Kubernetes.
 ---
 
-# Overview
+# Lagoon
 
 [Lagoon](https://docs.lagoon.sh/lagoon/) solves what developers are dreaming about: A system that allows developers to locally develop their code and their services with Docker and run the exact same system in production. The same Docker images, the same service configurations and the same code.
 
