@@ -8,9 +8,9 @@ description: Learn how to get started with the Lando Lagoon recipe.
 
 Before you get started with this recipe we assume that you have:
 
-1. [Installed Lando](https://docs.lando.dev/basics/installation.md) and gotten familiar with [its basics](https://docs.lando.dev/basics/)
-2. [Initialized](https://docs.lando.dev/basics/init.md) a [Landofile](https://docs.lando.dev/config/lando.md) for your codebase for use with this recipe
-3. Read about the various [services](https://docs.lando.dev/config/services.md), [tooling](https://docs.lando.dev/config/tooling.md), [events](https://docs.lando.dev/config/events.md) and [routing](https://docs.lando.dev/config/proxy.md) Lando offers.
+1. [Installed Lando](https://docs.lando.dev/getting-started/installation.html) and gotten familiar with [its basics](https://docs.lando.dev/getting-started/)
+2. [Initialized](https://docs.lando.dev/cli/init.html) a [Landofile](https://docs.lando.dev/config/) for your codebase for use with this recipe
+3. Read about the various [services](https://docs.lando.dev/config/services.html), [tooling](https://docs.lando.dev/config/tooling.html), [events](https://docs.lando.dev/config/events.html) and [routing](https://docs.lando.dev/config/proxy.html) Lando offers.
 4. Temporarily stopped (`pygmy stop`) the [Pygmy](https://pygmy.readthedocs.io/en/master/) tool to avoid any port conflicts
 
 ## Quick Start

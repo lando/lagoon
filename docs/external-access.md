@@ -9,9 +9,9 @@ mailchimp:
   button: Sign me up!
 ---
 
-If you would like to connect to your database, or some other service, from your host using a GUI client like SequelPro, you can run [`lando info`](https://docs.lando.dev/cli/info.md) and use the `external_connection` information and any relevant `creds` for the service you want to connect to.
+If you would like to connect to your database, or some other service, from your host using a GUI client like SequelPro, you can run [`lando info`](https://docs.lando.dev/cli/info.html) and use the `external_connection` information and any relevant `creds` for the service you want to connect to.
 
-You can also check out the environment variable [`LANDO INFO`](https://docs.lando.dev/guides/lando-info.md), which is available in every Lando container, as it contains useful information about how your application can access other Lando services.
+You can also check out the environment variable [`LANDO INFO`](https://docs.lando.dev/guides/lando-info.html), which is available in every Lando container, as it contains useful information about how your application can access other Lando services.
 
 Some example connection info for the `mariadb` service is shown below:
 
