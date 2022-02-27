@@ -26,7 +26,7 @@ module.exports = {
     sidebar: [
       {
         text: 'Overview',
-        link: '/index.md',
+        link: '/index.html',
       },
       '/getting-started.md',
       '/config.md',
@@ -38,7 +38,7 @@ module.exports = {
         children: [
           {
             text: 'Externally accessing services',
-            link: '/external-access.md',
+            link: '/external-access.html',
           },
         ],
       },
