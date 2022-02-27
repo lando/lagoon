@@ -5,9 +5,9 @@ description: Learn how to configure the Lando Platform.sh recipe.
 
 # Configuration
 
-While Lando [recipes](https://docs.lando.dev/config/recipes.md) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/config/recipes.md#config).
+While Lando [recipes](https://docs.lando.dev/config/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/config/recipes.html#config).
 
-Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/config/lando.md). If you are unsure about where this goes or what this means we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/config/recipes.md) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/config). If you are unsure about where this goes or what this means we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/config/recipes.html) to get a good handle on how the magicks work.
 
 ```yaml
 recipe: lagoon
@@ -16,9 +16,9 @@ config:
     - composer install
 ```
 
-If you do not already have a [Landofile](https://docs.lando.dev/config/lando.md) for your Lagoon site, we highly recommend you use [`lando init`](https://docs.lando.dev/basics/init.md) to get one as that will automatically populate the above defaults for you. Manually creating a Landofile with these things set correctly can be difficult and is *highly discouraged.*
+If you do not already have a [Landofile](https://docs.lando.dev/config) for your Lagoon site, we highly recommend you use [`lando init`](https://docs.lando.dev/cli/init.html) to get one as that will automatically populate the above defaults for you. Manually creating a Landofile with these things set correctly can be difficult and is *highly discouraged.*
 
-Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/config/recipes.md#extending-and-overriding-recipes).
+Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/config/recipes.html#extending-and-overriding-recipes).
 
 ## Setting Lagoon labels
 
