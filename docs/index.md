@@ -1,6 +1,7 @@
 ---
 title: Lagoon Lando Plugin
 description: The best local development option for Lagoon a Docker Build and Deploy System for OpenShift & Kubernetes.
+next: ./config.html
 ---
 
 # Lagoon
