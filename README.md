@@ -1,6 +1,6 @@
 # Lagoon Lando Plugin
 
-This is the _official_ [Lando](https://lando.dev) plugin for [Lagoon](https://lagoon.io). When installed it...
+This is the _official_ [Lando](https://lando.dev) plugin for [Lagoon](https://lagoon.sh). When installed it...
 
 * Closely mimics Lagoon's [stack, versions](https://docs.lagoon.sh/) locally
 * Allows you to easily `pull` your Lagoon site down locally
