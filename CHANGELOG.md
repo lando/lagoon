@@ -1,5 +1,12 @@
 ## IN DEVELOPMENT
 
+## v0.5.2 - [November 10, 2021](https://github.com/lando/lagoon/releases/tag/v0.5.2)
+
+Lando is **free** and **open source** software that relies on contributions from developers like you! If you like Lando then help us spend more time making, updating and supporting it by [contributing](https://github.com/sponsors/lando).
+
+* update text in push.js
+* add custom domain docs [PR #13](https://github.com/lando/lagoon/pull/13)
+
 ## v0.5.1 - [November 10, 2021](https://github.com/lando/lagoon/releases/tag/v0.5.1)
 
 Lando is **free** and **open source** software that relies on contributions from developers like you! If you like Lando then help us spend more time making, updating and supporting it by [contributing](https://github.com/sponsors/lando).
