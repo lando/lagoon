@@ -1,4 +1,6 @@
-## IN DEVELOPMENT
+## v0.6.0 - [September 8, 2022](https://github.com/lando/lagoon/releases/tag/v0.6.0)
+
+* HYPERDRIVED
 
 ## v0.5.3 - [April 21, 2022](https://github.com/lando/lagoon/releases/tag/v0.5.3)
 
