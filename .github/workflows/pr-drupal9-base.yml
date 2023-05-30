@@ -1,4 +1,4 @@
-name: Drupal Simple Example Tests
+name: Drupal9 Base Tests
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/drupal-example-simple
+          - examples/drupal9-base
         lando-versions:
           - edge
         os:
