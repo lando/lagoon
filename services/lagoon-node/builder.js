@@ -9,9 +9,9 @@ module.exports = {
   config: {
     version: 'custom',
     confSrc: __dirname,
-    command: '/sbin/tini -- /lagoon/entrypoints.sh yarn run start',
+    command: 'node',
     port: '3000',
-    moreHttpPorts: ['3000'],
+    moreHttpPorts: [],
   },
   parent: '_lagoon',
   builder: (parent, config) => class LandoLagoonNode extends parent {
@@ -20,9 +20,10 @@ module.exports = {
 
       // Build node
       const node = {
-        command: options.command,
+        command: `/sbin/tini -- /lagoon/entrypoints.sh ${options.command}`,
+        ports: [options.port],
       };
-
+      options.moreHttpPorts.push(options.port);
       // Add in the node service and push downstream
       super(id, options, {services: _.set({}, options.name, node)});
     };
