@@ -94,8 +94,10 @@ The services we currently support with links to their associated Lagoon docs is 
 * [Nginx](https://docs.lagoon.sh/lagoon/docker-images/nginx)
 * [PHP CLI](https://docs.lagoon.sh/lagoon/docker-images/php-cli)
 * [PHP-FPM](https://docs.lagoon.sh/lagoon/docker-images/php-fpm)
+* [Python](https://docs.lagoon.sh/docker-images/python/)
 * [PostgreSQL](https://docs.lagoon.sh/lagoon/docker-images/postgres)
 * [Redis](https://docs.lagoon.sh/lagoon/docker-images/redis)
+* [Ruby](https://docs.lagoon.sh/docker-images/ruby/)
 * [Solr](https://docs.lagoon.sh/lagoon/docker-images/solr)
 * [Varnish](https://docs.lagoon.sh/lagoon/docker-images/varnish)
 

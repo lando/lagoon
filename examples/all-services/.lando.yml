@@ -1,0 +1,12 @@
+name: all-services
+recipe: lagoon
+services:
+  node:
+    command: yarn run start
+    port: 3000
+  ruby:
+    command: ruby -run -e httpd / -p 3000
+    port: 3000
+  python:
+    command: python -m http.server 8800
+    port: 8800

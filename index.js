@@ -5,7 +5,7 @@ const _ = require('lodash');
 const lagoonConf = require('./lib/config');
 
 // CLI service types
-const cliServiceTypes = ['php-cli', 'php-cli-drupal'];
+const cliServiceTypes = ['php-cli', 'php-cli-drupal', 'node', 'python', 'ruby'];
 
 module.exports = lando => {
   // Switch the default service for the ssh command if its used
