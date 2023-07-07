@@ -1,4 +1,4 @@
-name: Drupal Simple Example Tests
+name: Drupal9 Base Tests
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/drupal-example-simple
+          - examples/drupal9-base
         lando-versions:
           - edge
         os:
@@ -22,9 +22,9 @@ jobs:
     steps:
       # Install deps and cache
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install node ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
