@@ -1,3 +1,6 @@
+## v0.9.0 - [August 1, 2023](https://github.com/lando/lagoon/releases/tag/v0.9.0)
+  * Added support for new Node, Ruby, and Python services. [PR #44](https://github.com/lando/lagoon/pull/44)
+
 ## v0.8.0 - [July 3, 2023](https://github.com/lando/lagoon/releases/tag/v0.8.0)
   * Removed bundle-dependencies and version-bump-prompt from plugin.
   * Updated package to use prepare-release-action.
