@@ -1,4 +1,4 @@
-name: All Services Tests
+name: Proxy Tests
 
 on:
   pull_request:
@@ -34,7 +34,7 @@ jobs:
       # This block should eventually become use lando/actions-hyperdrive@v2
       - name: Verify Docker dependencies
         run: |
-          docker --version | grep "20.10."
+          docker --version | grep "23.0."
           docker-compose --version | grep "1.29."
       - name: Grab latest edge Lando CLI
         run: |

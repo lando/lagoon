@@ -29,6 +29,9 @@ docker ps --filter label=com.docker.compose.project | grep Up | grep proxytests_
 lando ssh -u root -c "env" | grep LAGOON_ROUTE
 lando ssh -u root -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
+# Set the port being defined by Lando
+LANDO_PORT=$(lando config | grep proxyLastPorts | grep -o "http: '[0-9]*'" | awk -F"'" '{print $2}')
+
 # Should have node
 lando node --version
 
@@ -42,22 +45,22 @@ lando yarn --version
 lando lagoon --version | grep lagoon
 
 # Should have a running node service
-curl -kL http://node.proxy-tests.lndo.site/ | grep "LAGOON="
+curl -kL "http://node.proxy-tests.lndo.site:$LANDO_PORT/" | grep "LAGOON="
 
 # Should have a running python service
-curl -kL http://python.proxy-tests.lndo.site/ | grep "lagoon/"
+curl -kL "http://python.proxy-tests.lndo.site:$LANDO_PORT/" | grep "lagoon/"
 
 # Should have a running ruby service
-curl -kL http://ruby.proxy-tests.lndo.site/ | grep "Ruby/"
-curl -kL http://ruby.proxy-tests.lndo.site/ | grep "lagoon/"
+curl -kL "http://ruby.proxy-tests.lndo.site:$LANDO_PORT/" | grep "Ruby/"
+curl -kL "http://ruby.proxy-tests.lndo.site:$LANDO_PORT/" | grep "lagoon/"
 
 # Should have node defined as the primary server
 lando config | grep primaryServer | grep node
 
-# Update primary server, should now have python defined as the primary server
+# Update the primary server, should now have python defined as the primary server
 export LANDO_LANDO_FILE_CONFIG='{"config": {"primaryServer": "python"}}'
-lando rebuild -y
 lando config | grep primaryServer | grep python
+unset LANDO_LANDO_FILE_CONFIG
 ```
 
 Destroy tests
