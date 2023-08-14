@@ -22,11 +22,12 @@ module.exports = {
       const basic = {
         command: `/sbin/tini -- /lagoon/entrypoints.sh ${options.command}`,
         ports: [options.port],
+        volumes: options.volumes,
       };
       if (options.command == '') {
         throw Error(
-                'Please specify a relevant command for this service via .lando.yml',
-            );
+          'Please specify a relevant command for this service via .lando.yml',
+        );
       }
       options.moreHttpPorts.push(options.port);
       // Add in the basic service and push downstream
