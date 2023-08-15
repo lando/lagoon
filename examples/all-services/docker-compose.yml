@@ -55,3 +55,16 @@ services:
       << : *default-environment # loads the defined environment variables from the top
     networks:
       - default
+
+  basic:
+    image: uselagoon/ruby-3.0:latest
+    labels:
+      lagoon.type: basic
+      lando.type: basic
+    ports:
+      - "3000"
+    user: root
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+    networks:
+      - default
