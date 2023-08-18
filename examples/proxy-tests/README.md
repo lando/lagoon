@@ -56,11 +56,13 @@ curl -kL "http://ruby.proxy-tests.lndo.site:$LANDO_PORT/" | grep "lagoon/"
 
 # Should have node defined as the primary server
 lando config | grep primaryServer | grep node
+curl -kL "http://proxy-tests.lndo.site:$LANDO_PORT/" | grep "NODE_VERSION"
 
 # Update the primary server, should now have python defined as the primary server
-export LANDO_LANDO_FILE_CONFIG='{"config": {"primaryServer": "python"}}'
+sed -i "s/primaryServer: .*/primaryServer: python/" .lando.yml 
 lando config | grep primaryServer | grep python
-unset LANDO_LANDO_FILE_CONFIG
+lando rebuild -y && LANDO_PORT=$(lando config | grep proxyLastPorts | grep -o "http: '[0-9]*'" | awk -F"'" '{print $2}')
+curl -kL "http://proxy-tests.lndo.site:$LANDO_PORT/" | grep "lagoon/"
 ```
 
 Destroy tests
