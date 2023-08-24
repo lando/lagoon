@@ -9,7 +9,7 @@ module.exports = {
   config: {
     version: 'custom',
     confSrc: __dirname,
-    command: '/sbin/tini -- /lagoon/entrypoints.sh solr-foreground',
+    command: 'solr-foreground',
     port: '8983',
     portforward: true,
     moreHttpPorts: ['8983'],
@@ -44,6 +44,7 @@ module.exports = {
           port: _.get(options, 'portforward', 'not forwarded'),
         },
       });
+      console.log('data', options.data);
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, solr)});
     };

@@ -103,7 +103,7 @@ The services we currently support with links to their associated Lagoon docs is 
 
 Note that we are testing against the "Drupal" variants of the above but it's _possible_ the base services work as well.
 
-*Please note: if using [uselagoon/solr-8-drupal](https://github.com/uselagoon/lagoon-images/blob/main/images/solr-drupal/8.Dockerfile) you will need to add the following command to your `Solr` service in your `.lando.yml` file.
+*Please note: if using [uselagoon/solr-8-drupal](https://github.com/uselagoon/lagoon-images/blob/main/images/solr-drupal/8.Dockerfile) you will need to add the following command to your `Solr` service in your `.lando.yml` file. Alternate Solr images are supported and may require different commands, this is just one example.
 
 ```yaml
 recipe: lagoon
