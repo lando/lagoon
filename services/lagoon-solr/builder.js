@@ -27,7 +27,7 @@ module.exports = {
       if (_.get(options, '_app._config.uid', '1000') !== '1001') options._app.nonRoot.push(options.name);
 
       const solr = {
-        command: options.command,
+        command: `/sbin/tini -- /lagoon/entrypoints.sh ${options.command}`,
         ports: [options.port],
         volumes: [
           `${options.data}:/var/solr`,
