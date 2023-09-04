@@ -44,7 +44,6 @@ module.exports = {
           port: _.get(options, 'portforward', 'not forwarded'),
         },
       });
-      console.log('data', options.data);
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, solr)});
     };
