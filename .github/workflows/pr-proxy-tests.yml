@@ -34,7 +34,7 @@ jobs:
       # This block should eventually become use lando/actions-hyperdrive@v2
       - name: Verify Docker dependencies
         run: |
-          docker --version | grep "23.0."
+          docker --version | grep "24.0."
           docker-compose --version | grep "1.29."
       - name: Grab latest edge Lando CLI
         run: |
