@@ -1,0 +1,57 @@
+version: "2.3"
+
+x-environment:
+  &default-environment
+    LAGOON_PROJECT: "proxy-tests"
+    # Route that should be used locally
+    LAGOON_ROUTE: &default-url http://${COMPOSE_PROJECT_NAME:-proxy-tests}.docker.amazee.io
+    # Uncomment if you like to have the system behave like in production
+    LAGOON_ENVIRONMENT_TYPE: development
+    # Uncomment to enable xdebug and then restart via `docker-compose up -d`
+    #XDEBUG_ENABLE: "true"
+    HTTP_HOST: *default-url
+
+x-user:
+  &default-user
+    # The default user under which the containers should run. Change this if you are on linux and run with another user than id `1000`
+    user: '1000'
+
+services: 
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      lagoon.type: node
+      lando.type: node
+    ports:
+      - "3000"
+    user: root
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+    networks:
+      - default
+
+  python:
+    image: uselagoon/python-3.11:latest
+    labels:
+      lagoon.type: python
+      lando.type: python
+    ports:
+      - "8800"
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+    networks:
+      - default
+
+  ruby:
+    image: uselagoon/ruby-3.0:latest
+    labels:
+      lagoon.type: ruby
+      lando.type: ruby
+    ports:
+      - "3000"
+    environment:
+      << : *default-environment # loads the defined environment variables from the top
+    networks:
+      - default

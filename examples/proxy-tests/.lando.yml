@@ -1,0 +1,20 @@
+name: proxy-tests
+recipe: lagoon
+services:
+  node:
+    command: yarn run start
+    port: 3000
+    primary: true
+  ruby:
+    command: ruby -run -e httpd / -p 3000
+    port: 3000
+    primary: false
+  python:
+    command: python -m http.server 8800
+    port: 8800
+    primary: false
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/lagoon": ./../../
