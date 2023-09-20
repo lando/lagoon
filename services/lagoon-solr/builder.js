@@ -9,7 +9,7 @@ module.exports = {
   config: {
     version: 'custom',
     confSrc: __dirname,
-    command: '/sbin/tini -- /lagoon/entrypoints.sh solr-foreground',
+    command: 'solr-foreground',
     port: '8983',
     portforward: true,
     moreHttpPorts: ['8983'],
@@ -27,7 +27,7 @@ module.exports = {
       if (_.get(options, '_app._config.uid', '1000') !== '1001') options._app.nonRoot.push(options.name);
 
       const solr = {
-        command: options.command,
+        command: `/sbin/tini -- /lagoon/entrypoints.sh ${options.command}`,
         ports: [options.port],
         volumes: [
           `${options.data}:/var/solr`,
