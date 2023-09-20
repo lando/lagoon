@@ -2,9 +2,9 @@ version: "2.3"
 
 x-environment:
   &default-environment
-    LAGOON_PROJECT: "all-services"
+    LAGOON_PROJECT: "proxy-tests"
     # Route that should be used locally
-    LAGOON_ROUTE: &default-url http://${COMPOSE_PROJECT_NAME:-all-services}.docker.amazee.io
+    LAGOON_ROUTE: &default-url http://${COMPOSE_PROJECT_NAME:-proxy-tests}.docker.amazee.io
     # Uncomment if you like to have the system behave like in production
     LAGOON_ENVIRONMENT_TYPE: development
     # Uncomment to enable xdebug and then restart via `docker-compose up -d`
@@ -55,15 +55,3 @@ services:
       << : *default-environment # loads the defined environment variables from the top
     networks:
       - default
-
-  solr-8:
-    image: uselagoon/solr-8:latest
-    labels:
-      lagoon.type: solr
-      lando.type: solr
-    ports:
-      - "8983:8983"
-    environment:
-      << : *default-environment
-    volumes:
-      - search:/var/solr

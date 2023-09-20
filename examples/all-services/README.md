@@ -58,9 +58,13 @@ curl -kL http://python.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
 curl -kL http://ruby.all-services.lndo.site:$LANDO_PORT/ | grep "Ruby/"
 curl -kL http://ruby.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
 
-# Should have a running ruby service
+# Should have a running basic service
 curl -kL http://basic.all-services.lndo.site:$LANDO_PORT/ | grep "basic"
 curl -kL http://basic.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
+
+# Should have a "mycore" Solr core
+curl 'http://localhost:8983/solr/admin/cores?action=STATUS&core=mycore' | grep "mycore"
+
 ```
 
 Destroy tests
