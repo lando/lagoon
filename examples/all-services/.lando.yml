@@ -12,6 +12,9 @@ services:
     port: 8800
   solr-8:
     command: solr-precreate mycore
+  basic:
+    command: ruby -run -e httpd / -p 3000
+    port: 3000
 
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!
