@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/drupal9-base
+          - drupal9-base
         lando-version:
           - 3-dev
         os:

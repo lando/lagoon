@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/all-services
+          - all-services
         lando-version:
           - 3-dev
         os:

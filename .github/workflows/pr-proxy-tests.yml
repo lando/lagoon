@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/proxy-tests
+          - proxy-tests
         lando-version:
           - 3-dev
         os:
