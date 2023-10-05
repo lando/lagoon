@@ -1,5 +1,10 @@
-## v0.10.0 - [October 5, 2023](https://github.com/lando/lagoon/releases/tag/v0.10.0)
+## v0.11.0 - [October 5, 2023](https://github.com/lando/lagoon/releases/tag/v0.11.0)
 * Added a "wait for user" script to ensure user is loaded before cloning repo. [lando/core#71](https://github.com/lando/core/pull/71)
+
+## v0.10.0 - [September 21, 2023](https://github.com/lando/lagoon/releases/tag/v0.10.0)
+* Added support for defining Solr commands via .lando.yml [#48](https://github.com/lando/lagoon/pull/48)
+* Added the Basic Lagoon/Lando Service [#47](https://github.com/lando/lagoon/pull/47)
+* Added support for proxy service to handle primary servers other than Nginx [#45](https://github.com/lando/lagoon/pull/45)
 
 ## v0.9.0 - [August 1, 2023](https://github.com/lando/lagoon/releases/tag/v0.9.0)
   * Added support for new Node, Ruby, and Python services. [PR #44](https://github.com/lando/lagoon/pull/44)
