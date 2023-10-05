@@ -129,6 +129,7 @@ module.exports = {
         // Reload key and proceed git clone ops
         return [
           {name: 'reload-keys', cmd: '/helpers/load-keys.sh --silent', user: 'root'},
+          {name: 'wait-for-user', cmd: '/helpers/lagoon-wait-for-user.sh'},
           {name: 'clone-repo', cmd: `/helpers/get-remote-url.sh ${project.gitUrl}`, remove: true},
         ];
       }));
