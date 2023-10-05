@@ -1,3 +1,6 @@
+## v0.10.0 - [October 5, 2023](https://github.com/lando/lagoon/releases/tag/v0.10.0)
+* Added a "wait for user" script to ensure user is loaded before cloning repo. [lando/core#71](https://github.com/lando/core/pull/71)
+
 ## v0.9.0 - [August 1, 2023](https://github.com/lando/lagoon/releases/tag/v0.9.0)
   * Added support for new Node, Ruby, and Python services. [PR #44](https://github.com/lando/lagoon/pull/44)
 
