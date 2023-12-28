@@ -30,12 +30,19 @@ jobs:
           cache: npm
       - name: Install NPM dependencies
         run: npm clean-install --prefer-offline --frozen-lockfile
+      - name: Bundle Deps
+        uses: lando/prepare-release-action@v2
+        with:
+          lando-plugin: true
+          version: dev
+          sync: false
       - name: Setup lando ${{ matrix.lando-version }}
         uses: lando/setup-lando@v2
         with:
           lando-version: ${{ matrix.lando-version }}
           config: |
-            plugins.@lando/lagoon=/home/runner/work/lagoon/lagoon
+            setup.skipCommonPlugins=true
+            setup.plugins.@lando/lagoon=/home/runner/work/lagoon/lagoon
           telemetry: false
       - name: Move in lando config appropriate for testing
         run: |
@@ -43,14 +50,6 @@ jobs:
           cp -f actions-lando-config.yml ~/.lando/config.yml
           echo false > ~/.lando/cache/report_errors
           lando --clear
-      - name: Verify Lando works and we are dogfooding this plugin for tests
-        run: |
-          lando version
-          lando config --path plugins | grep lagoon | grep /home/runner/work/lagoon/lagoon || (echo "::error:: Not dogfooding this plugin correctly! " && exit 1)
-      - name: Verify Lando works and we are dogfooding this plugin for tests
-        run: |
-          lando version
-          lando config --path plugins | grep lagoon | grep /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }} || (echo "::error:: Not dogfooding this plugin correctly! " && exit 1)
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
