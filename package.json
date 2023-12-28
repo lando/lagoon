@@ -43,6 +43,7 @@
     "test": "npm run lint && npm run test:unit"
   },
   "dependencies": {
+    "@lando/mailhog": "^1.0.0",
     "axios": "0.21.4",
     "bluebird": "^3.4.1",
     "js-yaml": "^3.4.6",

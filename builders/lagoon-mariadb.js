@@ -2,7 +2,7 @@
 
 // Modules
 const _ = require('lodash');
-const {getLagoonEnv} = require('./../../lib/services');
+const {getLagoonEnv} = require('./../lib/services');
 
 // Builder
 module.exports = {

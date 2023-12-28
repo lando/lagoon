@@ -3,11 +3,11 @@
 // Modules
 const _ = require('lodash');
 const fs = require('fs');
-const keys = require('./../../lib/keys');
+const keys = require('./../lib/keys');
 const os = require('os');
 const path = require('path');
 
-const LagoonApi = require('./../../lib/api');
+const LagoonApi = require('./../lib/api');
 
 // Lagoon
 const lagoonKeysCache = 'lagoon.keys';
