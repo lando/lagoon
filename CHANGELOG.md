@@ -1,5 +1,8 @@
-## v1.0.0 - [December 7, 2023](https://github.com/lando/lagoon/releases/tag/v1.0.0)
-    * Dialed fully for `lando update`
+## v1.0.0 - [December 28, 2023](https://github.com/lando/lagoon/releases/tag/v1.0.0)
+
+  * Dialed fully for `lando update`
+  * Switched from the `compose` (deprecated) service type to the `lando` service type for the `lagoon-cli` service.
+  * Created a `lagoon-mailhog` service that is a passthrough to `@lando/mailhog`.
 
 ## v0.11.0 - [October 5, 2023](https://github.com/lando/lagoon/releases/tag/v0.11.0)
 * Added a "wait for user" script to ensure user is loaded before cloning repo. [lando/core#71](https://github.com/lando/core/pull/71)
