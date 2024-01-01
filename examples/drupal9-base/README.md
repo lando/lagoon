@@ -16,7 +16,7 @@ lando poweroff
 
 # Should get the the drupal example simple repo
 rm -rf drupal
-git clone https://github.com/lagoon-examples/drupal9-base.git drupal
+git clone https://github.com/lagoon-examples/drupal-base.git drupal
 cp .lando.local.yml drupal/.lando.local.yml
 cd drupal
 
@@ -38,11 +38,11 @@ lando drush cr -y
 lando drush status | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9base_nginx_1
-docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9base_mariadb_1
-docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9base_mailhog_1
-docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9base_php_1
-docker ps --filter label=com.docker.compose.project | grep Up | grep drupal9base_cli_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_nginx_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_mariadb_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_mailhog_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_php_1
+docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_cli_1
 
 # Should ssh against the cli container by default
 cd drupal
@@ -50,7 +50,7 @@ lando ssh -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
 cd drupal
-lando ssh -c "env" | grep LAGOON_ROUTE | grep https://drupal9-base.lndo.site
+lando ssh -c "env" | grep LAGOON_ROUTE | grep https://drupal-base.lndo.site
 lando ssh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should have composer

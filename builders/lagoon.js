@@ -4,12 +4,12 @@
 const _ = require('lodash');
 const os = require('os');
 const path = require('path');
-const {getKeys, parseKey} = require('../../lib/keys');
-const {getPull} = require('../../lib/pull');
-const {getPush} = require('../../lib/push');
-const {getLandoAuxServices, getLandoServices, getSQLServices} = require('./../../lib/services');
-const {getLandoTooling, getDBUtils} = require('./../../lib/tooling');
-const {getLandoProxyRoutes} = require('./../../lib/proxy');
+const {getKeys, parseKey} = require('../lib/keys');
+const {getPull} = require('../lib/pull');
+const {getPush} = require('../lib/push');
+const {getLandoAuxServices, getLandoServices, getSQLServices} = require('./../lib/services');
+const {getLandoTooling, getDBUtils} = require('./../lib/tooling');
+const {getLandoProxyRoutes} = require('./../lib/proxy');
 
 /*
  * Build Lagoon and stuff
