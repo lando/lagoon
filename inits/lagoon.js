@@ -128,8 +128,8 @@ module.exports = {
         if (!project) throw Error(`Could not find a site called ${options['lagoon-site']}`);
         // Reload key and proceed git clone ops
         return [
-          {name: 'reload-keys', cmd: '/helpers/load-keys.sh --silent', user: 'root'},
           {name: 'wait-for-user', cmd: '/helpers/lagoon-wait-for-user.sh'},
+          {name: 'reload-keys', cmd: '/helpers/load-keys.sh --silent', user: 'root'},
           {name: 'clone-repo', cmd: `/helpers/get-remote-url.sh ${project.gitUrl}`, remove: true},
         ];
       }));
