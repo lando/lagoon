@@ -1,4 +1,8 @@
-## v1.0.0 - [December 28, 2023](https://github.com/lando/lagoon/releases/tag/v1.0.0)
+## v1.0.1 - [January 2, 2024](https://github.com/lando/lagoon/releases/tag/v1.0.1)
+
+  * Placed `wait-for-user` script first in init build.
+
+## v1.0.0 - [January 1, 2024](https://github.com/lando/lagoon/releases/tag/v1.0.0)
 
   * Dialed fully for `lando update`
   * Switched from the `compose` (deprecated) service type to the `lando` service type for the `lagoon-cli` service.
