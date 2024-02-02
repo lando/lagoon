@@ -98,7 +98,7 @@ The services we currently support with links to their associated Lagoon docs is 
 * [PostgreSQL](https://docs.lagoon.sh/docker-images/postgres/)
 * [Redis](https://docs.lagoon.sh/docker-images/redis/)
 * [Ruby](https://docs.lagoon.sh/docker-images/ruby/)
-* [Solr*](https://docs.lagoon.sh/docker-images/solr)
+* [Solr*](https://docs.lagoon.sh/docker-images/solr/)
 * [Varnish](https://docs.lagoon.sh/docker-images/varnish/)
 
 Note that we are testing against the "Drupal" variants of the above but it's _possible_ the base services work as well.
