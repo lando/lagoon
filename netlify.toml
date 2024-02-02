@@ -45,3 +45,7 @@
   from = "/lagoon/*"
   to = "/:splat"
   status = 200
+[[redirects]]
+  from = "/lagoon/external-access.html"
+  to = "https://docs.lando.dev/guides/external-access.html"
+  status = 200

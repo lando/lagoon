@@ -35,7 +35,6 @@ For more info you should check out the [docs](https://docs.lando.dev/lagoon):
 * [Configuration](https://docs.lando.dev/lagoon/config.html)
 * [Tooling](https://docs.lando.dev/lagoon/tooling.html)
 * [Syncing](https://docs.lando.dev/lagoon/syncing.html)
-* [Guides](https://docs.lando.dev/lagoon/external-access.html)
 * [Examples](https://github.com/lando/lagoon/tree/main/examples)
 * [Development](https://docs.lando.dev/lagoon/development.html)
 
