@@ -57,7 +57,7 @@ services:
       << : *default-environment
 ```
 
-For the most up to date list of supported labels, check out [this](https://github.com/lando/lagoon/blob/main/lib/services.js#id=L15). To see labels in action check out the official [Amazee.io Drupal 9 Lagoon example](https://github.com/amazeeio/drupal-example-simple/blob/9.x/docker-compose.yml#id=L40).
+For the most up to date list of supported labels, check out [this](https://github.com/lando/lagoon/blob/main/lib/services.js#id="L15"). To see labels in action check out the official [Amazee.io Drupal 9 Lagoon example](https://github.com/amazeeio/drupal-example-simple/blob/9.x/docker-compose.yml#id="L40").
 
 Also note that Lando additionally supports `lagoon.type === none` as documented over [here](https://docs.lagoon.sh/using-lagoon-the-basics/docker-compose-yml/#skipignore-containers).
 
@@ -89,17 +89,17 @@ Lando will read and interpret your normal `.lagoon.yml` and its associated Docke
 The services we currently support with links to their associated Lagoon docs is shown below:
 
 * [Elasticsearch](https://docs.lagoon.sh/docker-images/opensearch/)
-* [MariaDB](https://docs.lagoon.sh/docker-images/mariadb)
+* [MariaDB](https://docs.lagoon.sh/docker-images/mariadb/)
 * [Node](https://docs.lagoon.sh/docker-images/nodejs/)
 * [Nginx](https://docs.lagoon.sh/docker-images/nginx/)
-* [PHP CLI](https://docs.lagoon.sh/docker-images/php-cli)
-* [PHP-FPM](https://docs.lagoon.sh/docker-images/php-fpm)
+* [PHP CLI](https://docs.lagoon.sh/docker-images/php-cli/)
+* [PHP-FPM](https://docs.lagoon.sh/docker-images/php-fpm/)
 * [Python](https://docs.lagoon.sh/docker-images/python/)
-* [PostgreSQL](https://docs.lagoon.sh/docker-images/postgres)
-* [Redis](https://docs.lagoon.sh/docker-images/redis)
+* [PostgreSQL](https://docs.lagoon.sh/docker-images/postgres/)
+* [Redis](https://docs.lagoon.sh/docker-images/redis/)
 * [Ruby](https://docs.lagoon.sh/docker-images/ruby/)
 * [Solr*](https://docs.lagoon.sh/docker-images/solr)
-* [Varnish](https://docs.lagoon.sh/docker-images/varnish)
+* [Varnish](https://docs.lagoon.sh/docker-images/varnish/)
 
 Note that we are testing against the "Drupal" variants of the above but it's _possible_ the base services work as well.
 
