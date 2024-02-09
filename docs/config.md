@@ -5,9 +5,9 @@ description: Learn how to configure the Lando Platform.sh recipe.
 
 # Configuration
 
-While Lando [recipes](https://docs.lando.dev/config/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/config/recipes.html#config).
+While Lando [recipes](https://docs.lando.dev/core/v3/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/core/v3/recipes.html#config).
 
-Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/config). If you are unsure about where this goes or what this means we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/config/recipes.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/core/v3). If you are unsure about where this goes or what this means we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/core/v3/recipes.html) to get a good handle on how the magicks work.
 
 ```yaml
 recipe: lagoon
@@ -16,9 +16,9 @@ config:
     - composer install
 ```
 
-If you do not already have a [Landofile](https://docs.lando.dev/config) for your Lagoon site, we highly recommend you use [`lando init`](https://docs.lando.dev/cli/init.html) to get one as that will automatically populate the above defaults for you. Manually creating a Landofile with these things set correctly can be difficult and is *highly discouraged.*
+If you do not already have a [Landofile](https://docs.lando.dev/core/v3) for your Lagoon site, we highly recommend you use [`lando init`](https://docs.lando.dev/cli/init.html) to get one as that will automatically populate the above defaults for you. Manually creating a Landofile with these things set correctly can be difficult and is *highly discouraged.*
 
-Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/config/recipes.html#extending-and-overriding-recipes).
+Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/core/v3/recipes.html#extending-and-overriding-recipes).
 
 ## Setting Lagoon labels
 
@@ -57,7 +57,7 @@ services:
       << : *default-environment
 ```
 
-For the most up to date list of supported labels, check out [this](https://github.com/lando/lagoon/blob/main/lib/services.js#L15). To see labels in action check out the official [Amazee.io Drupal 9 Lagoon example](https://github.com/amazeeio/drupal-example-simple/blob/9.x/docker-compose.yml#L40).
+For the most up to date list of supported labels, check out [this](https://github.com/lando/lagoon/blob/main/lib/services.js). You can see the labels in action on the official [Amazee.io Drupal 9 Lagoon example](https://github.com/amazeeio/drupal-example-simple/blob/9.x/docker-compose.yml).
 
 Also note that Lando additionally supports `lagoon.type === none` as documented over [here](https://docs.lagoon.sh/using-lagoon-the-basics/docker-compose-yml/#skipignore-containers).
 
@@ -74,7 +74,7 @@ config:
     - drush sql-sync my-database
 ```
 
-These will run against the [Lagoon PHP CLI Drupal container](https://docs.lagoon.sh/lagoon/docker-images/php-cli/php-cli-drupal) so you will have access to all the tools there as well as the ones it inherits from the base [PHP CLI container](https://docs.lagoon.sh/lagoon/docker-images/php-cli).
+These will run against the [Lagoon PHP CLI Drupal container](https://docs.lagoon.sh/drupal/services/php-cli/) so you will have access to all the tools there as well as the ones it inherits from the base [PHP CLI container](https://docs.lagoon.sh/docker-images/php-cli/).
 
 Note that these will run the _first time_ you run `lando start`. You will need to run `lando rebuild` to trigger them again if you make changes.
 
@@ -88,18 +88,18 @@ Lando will read and interpret your normal `.lagoon.yml` and its associated Docke
 
 The services we currently support with links to their associated Lagoon docs is shown below:
 
-* [Elasticsearch](https://docs.lagoon.sh/lagoon/docker-images/elasticsearch)
-* [MariaDB](https://docs.lagoon.sh/lagoon/docker-images/mariadb)
+* [Elasticsearch](https://docs.lagoon.sh/docker-images/opensearch/)
+* [MariaDB](https://docs.lagoon.sh/docker-images/mariadb/)
 * [Node](https://docs.lagoon.sh/docker-images/nodejs/)
-* [Nginx](https://docs.lagoon.sh/lagoon/docker-images/nginx)
-* [PHP CLI](https://docs.lagoon.sh/lagoon/docker-images/php-cli)
-* [PHP-FPM](https://docs.lagoon.sh/lagoon/docker-images/php-fpm)
+* [Nginx](https://docs.lagoon.sh/docker-images/nginx/)
+* [PHP CLI](https://docs.lagoon.sh/docker-images/php-cli/)
+* [PHP-FPM](https://docs.lagoon.sh/docker-images/php-fpm/)
 * [Python](https://docs.lagoon.sh/docker-images/python/)
-* [PostgreSQL](https://docs.lagoon.sh/lagoon/docker-images/postgres)
-* [Redis](https://docs.lagoon.sh/lagoon/docker-images/redis)
+* [PostgreSQL](https://docs.lagoon.sh/docker-images/postgres/)
+* [Redis](https://docs.lagoon.sh/docker-images/redis/)
 * [Ruby](https://docs.lagoon.sh/docker-images/ruby/)
-* [Solr*](https://docs.lagoon.sh/lagoon/docker-images/solr)
-* [Varnish](https://docs.lagoon.sh/lagoon/docker-images/varnish)
+* [Solr*](https://docs.lagoon.sh/docker-images/solr/)
+* [Varnish](https://docs.lagoon.sh/docker-images/varnish/)
 
 Note that we are testing against the "Drupal" variants of the above but it's _possible_ the base services work as well.
 
@@ -114,7 +114,7 @@ services:
 
 ## Customizing your domain or using a non `lndo.site` domain
 
-As per the general Lando [Proxy](https://docs.lando.dev/config/proxy.html) instructions, it is possible to configure custom domains (i.e. `myapp.lndo.site` or `foo.bar.xyz`) for your site.  However, as the default Lagoon base images are built slightly differently to the default Lando ones, you need to specify the port  to route the request to (usually 8080 for nginx):
+As per the general Lando [Proxy](https://docs.lando.dev/core/v3/proxy.html) instructions, it is possible to configure custom domains (i.e. `myapp.lndo.site` or `foo.bar.xyz`) for your site.  However, as the default Lagoon base images are built slightly differently to the default Lando ones, you need to specify the port  to route the request to (usually 8080 for nginx):
 
 Add the following lines to your .lando.yml file
 
