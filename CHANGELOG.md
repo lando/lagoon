@@ -1,3 +1,6 @@
+## v1.1.0 - [March 8, 2024](https://github.com/lando/lagoon/releases/tag/v1.1.0)
+  * Updated to latest database services.
+
 ## v1.0.1 - [January 2, 2024](https://github.com/lando/lagoon/releases/tag/v1.0.1)
 
   * Placed `wait-for-user` script first in init build.
