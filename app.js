@@ -14,6 +14,7 @@ const LagoonApi = require('./lib/api');
 // Only do this on lagoon recipes
 module.exports = (app, lando) => {
   if (_.get(app, 'config.recipe') === 'lagoon') {
+    process.env.DOCKER_BUILDKIT=0;
     // Indicate awareness
     app.log.verbose('identified a lagoon app');
 
