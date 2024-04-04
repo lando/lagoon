@@ -1,5 +1,10 @@
+## v1.2.0 - [April 4, 2024](https://github.com/lando/lagoon/releases/tag/v1.2.0)
+
+* Fixed issue with Postgres builder having the wrong path. [#76](https://github.com/lando/lagoon/pull/76)
+
 ## v1.1.0 - [March 8, 2024](https://github.com/lando/lagoon/releases/tag/v1.1.0)
-  * Updated to latest database services.
+
+* Updated to latest database services.
 
 ## v1.0.1 - [January 2, 2024](https://github.com/lando/lagoon/releases/tag/v1.0.1)
 
