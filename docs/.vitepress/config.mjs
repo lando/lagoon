@@ -52,8 +52,8 @@ function sidebar() {
         {text: 'GitHub', link: 'https://github.com/lando/lagoon/issues/new/choose'},
         {text: 'Slack', link: 'https://www.launchpass.com/devwithlando'},
         {text: 'Contact Us', link: '/support'},
+        {text: 'Examples', link: 'https://github.com/lando/lagoon/tree/main/examples'},
       ],
     },
-    {text: 'Examples', link: 'https://github.com/lando/lagoon/tree/main/examples'},
   ];
 };
