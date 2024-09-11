@@ -11,7 +11,7 @@ Before you get started with this recipe we assume that you have:
 1. [Installed Lando](https://docs.lando.dev/getting-started/installation.html) and gotten familiar with [its basics](https://docs.lando.dev/getting-started/)
 2. [Initialized](https://docs.lando.dev/cli/init.html) a [Landofile](https://docs.lando.dev/core/v3/) for your codebase for use with this recipe
 3. Read about the various [services](https://docs.lando.dev/core/v3/services/lando.html), [tooling](https://docs.lando.dev/core/v3/tooling.html), [events](https://docs.lando.dev/core/v3/events.html) and [routing](https://docs.lando.dev/core/v3/proxy.html) Lando offers.
-4. Temporarily stopped (`pygmy stop`) the [Pygmy](https://pygmy.readthedocs.io/en/master/) tool to avoid any port conflicts
+4. Temporarily stopped (`pygmy stop`) the [Pygmy](https://pygmy.readthedocs.io/en/mkdocs/) tool to avoid any port conflicts
 
 ## Quick Start
 

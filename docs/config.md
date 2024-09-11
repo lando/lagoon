@@ -59,7 +59,7 @@ services:
 
 For the most up to date list of supported labels, check out [this](https://github.com/lando/lagoon/blob/main/lib/services.js). You can see the labels in action on the official [Amazee.io Drupal 9 Lagoon example](https://github.com/amazeeio/drupal-example-simple/blob/9.x/docker-compose.yml).
 
-Also note that Lando additionally supports `lagoon.type === none` as documented over [here](https://docs.lagoon.sh/using-lagoon-the-basics/docker-compose-yml/#skipignore-containers).
+Also note that Lando additionally supports `lagoon.type === none` as documented over [here](https://docs.lagoon.sh/concepts-basics/docker-compose-yml/#skipignore-containers).
 
 ## Build steps
 
