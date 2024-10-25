@@ -1,3 +1,5 @@
+## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
+
 ## v1.2.0 - [April 4, 2024](https://github.com/lando/lagoon/releases/tag/v1.2.0)
 
 * Fixed issue with Postgres builder having the wrong path. [#76](https://github.com/lando/lagoon/pull/76)
