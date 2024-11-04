@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.3.1 - [November 4, 2024](https://github.com/lando/lagoon/releases/tag/v1.3.1)
+
 * Updated to [@lando/vitepress-theme-default-plus@v1.1.0-beta.18](https://github.com/lando/vitepress-theme-default-plus/releases/tag/v1.1.0-beta.18).
 
 ## v1.2.0 - [April 4, 2024](https://github.com/lando/lagoon/releases/tag/v1.2.0)
