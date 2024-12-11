@@ -1,8 +1,6 @@
-Lagoon Proxy Tests
-=======================
+# Lagoon Proxy Tests
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -14,8 +12,7 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -65,8 +62,7 @@ lando rebuild -y && LANDO_PORT=$(lando config | grep proxyLastPorts | grep -o "h
 curl -kL "http://proxy-tests.lndo.site:$LANDO_PORT/" | grep "lagoon/"
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

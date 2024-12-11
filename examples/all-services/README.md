@@ -1,12 +1,10 @@
-Lagoon All Services
-=======================
+# Lagoon All Services
 
 This example exists primarily to test the following documentation:
 
 * [Lagoon Recipe - Drupal 9](https://docs.lando.dev/config/lagoon.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -18,8 +16,7 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -67,8 +64,7 @@ curl 'http://localhost:8983/solr/admin/cores?action=STATUS&core=mycore' | grep "
 
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

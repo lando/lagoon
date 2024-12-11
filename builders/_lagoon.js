@@ -58,6 +58,6 @@ module.exports = {
 
       // ADD IN OTHER LANDO STUFF? info? etc?
       super(id, options, ...sources);
-    };
+    }
   },
 };

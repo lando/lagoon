@@ -7,9 +7,9 @@ const LandoMailhog = require('@lando/mailhog/builders/mailhog.js');
 module.exports = {
   name: 'lagoon-mailhog',
   parent: '_service',
-  builder: (parent, config) => class LagoonMailhog extends LandoMailhog.builder(parent, LandoMailhog.config) {
+  builder: parent => class LagoonMailhog extends LandoMailhog.builder(parent, LandoMailhog.config) {
     constructor(id, options = {}) {
       super(id, options, {services: _.set({}, options.name)});
-    };
+    }
   },
 };

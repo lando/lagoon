@@ -14,8 +14,6 @@
     skipPatterns = [ ".rss", ".gif", ".jpg" ]
     checkExternal = true
 
-
-
 # Sets our asset optimization
 [build.processing.css]
   bundle = true

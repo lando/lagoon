@@ -69,6 +69,6 @@ module.exports = {
 
       // Send downstream
       super(id, options);
-    };
+    }
   },
 };
