@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.4.0 - [December 11, 2024](https://github.com/lando/lagoon/releases/tag/v1.4.0)
+
 * Optimized for `midcore`
 * Removed unneeded dep `bluebird`
 * Simplified dependency chain
