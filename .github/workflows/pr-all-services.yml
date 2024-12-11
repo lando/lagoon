@@ -44,20 +44,6 @@ jobs:
             setup.skipCommonPlugins=true
             setup.plugins.@lando/lagoon=/home/runner/work/lagoon/lagoon
           telemetry: false
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "lagoon/lagoon"
-          replace: ${{ github.event.repository.name }}/${{ github.event.repository.name }}
-          include: "actions-lando-config.yml"
-          regex: false
-      # @TODO: Do we still need this?
-      - name: Move in lando config appropriate for testing
-        run: |
-          mkdir -p ~/.lando/cache
-          cp -f actions-lando-config.yml ~/.lando/config.yml
-          echo false > ~/.lando/cache/report_errors
-          lando --clear
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:

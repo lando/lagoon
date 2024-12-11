@@ -15,7 +15,7 @@ lando poweroff
 # Should get the the drupal example simple repo
 rm -rf drupal
 git clone https://github.com/lagoon-examples/drupal-base.git drupal
-cp .lando.local.yml drupal/.lando.local.yml
+cp ../../.lando.upstream.yml drupal/.lando.upstream.yml
 cd drupal
 
 # Should start up our lagoon drupal example simple site successfully
