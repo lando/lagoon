@@ -1,4 +1,4 @@
-name: Drupal9 Base Tests
+name: Lagoon Tests
 
 on:
   pull_request:
@@ -9,11 +9,15 @@ jobs:
     env:
       TERM: xterm
     strategy:
+      fail-fast: false
       matrix:
-        leia-tests:
-          - drupal9-base
+        leia-test:
+          - examples/all-services
+          - examples/drupal9-base
+          - examples/proxy-tests
         lando-version:
           - 3-edge
+          - 3-stable
         os:
           - ubuntu-24.04
         node-version:
@@ -47,7 +51,7 @@ jobs:
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
-          leia-test: "./examples/${{ matrix.leia-tests }}/README.md"
+          leia-test: "./${{ matrix.leia-test }}/README.md"
           cleanup-header: "Destroy tests"
           shell: bash
           stdin: true
