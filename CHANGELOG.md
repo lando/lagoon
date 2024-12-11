@@ -1,5 +1,12 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Optimized for `midcore`
+* Removed unneeded dep `bluebird`
+* Simplified dependency chain
+* Updated to [@lando/mailhog@1.2.3](https://github.com/lando/mailhog/releases/tag/v1.2.3).
+* Updated to [js-yaml@^4.1.0](https://www.npmjs.com/package/js-yaml).
+* Updated to [axios@^1.7.9](https://www.npmjs.com/package/axios).
+
 ## v1.3.3 - [December 6, 2024](https://github.com/lando/lagoon/releases/tag/v1.3.3)
 
 * Updated the version index.md to get Docuverse page to build correctly.

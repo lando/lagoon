@@ -21,7 +21,7 @@ lando php               Runs php commands
 lando yarn              Runs yarn commands
 ```
 
-Note that you can define your own commands by using out [tooling framework](https://docs.lando.dev/core/v3/tooling.html). Also check out the guides for the powerful [DB Export](https://docs.lando.dev/guides/db-export.html) and [DB Import](https://docs.lando.dev/guides/db-import.html) commands.
+Note that you can define your own commands by using out [tooling framework](https://docs.lando.dev/landofile/tooling.html). Also check out the guides for the powerful [DB Export](https://docs.lando.dev/guides/db-export.html) and [DB Import](https://docs.lando.dev/guides/db-import.html) commands.
 
 Also, check out the [Lagoon CLI Docs](https://uselagoon.github.io/lagoon-cli/commands/lagoon/) for more information on using `lando lagoon`.
 

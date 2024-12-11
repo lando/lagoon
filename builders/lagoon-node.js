@@ -15,7 +15,7 @@ module.exports = {
   },
   parent: '_lagoon',
   builder: (parent, config) => class LandoLagoonNode extends parent {
-    constructor(id, options = {}, factory) {
+    constructor(id, options = {}) {
       options = _.merge({}, config, options);
 
       // Build node
@@ -26,6 +26,6 @@ module.exports = {
       options.moreHttpPorts.push(options.port);
       // Add in the node service and push downstream
       super(id, options, {services: _.set({}, options.name, node)});
-    };
+    }
   },
 };

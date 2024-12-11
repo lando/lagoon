@@ -22,7 +22,7 @@ module.exports = {
   },
   parent: '_lagoon',
   builder: (parent, config) => class LandoLagoonPostgres extends parent {
-    constructor(id, options = {}, factory) {
+    constructor(id, options = {}) {
       options = _.merge({}, config, options);
 
       // Set the meUser
@@ -71,6 +71,6 @@ module.exports = {
 
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, postgres)});
-    };
+    }
   },
 };

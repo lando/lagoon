@@ -24,7 +24,7 @@ module.exports = {
   },
   parent: '_lagoon',
   builder: (parent, config) => class LandoLagoonPhp extends parent {
-    constructor(id, options = {}, factory) {
+    constructor(id, options = {}) {
       options = _.merge({}, config, options);
 
       // Build the php
@@ -38,6 +38,6 @@ module.exports = {
 
       // Add in the php service and push downstream
       super(id, options, {services: _.set({}, options.name, php)});
-    };
+    }
   },
 };
