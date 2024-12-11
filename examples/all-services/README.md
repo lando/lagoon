@@ -30,9 +30,6 @@ docker ps --filter label=com.docker.compose.project | grep Up | grep allservices
 lando ssh -u root -c "env" | grep LAGOON_ROUTE
 lando ssh -u root -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
-# Set the port being defined by Lando
-LANDO_PORT=$(lando config | grep proxyLastPorts | grep -o "http: '[0-9]*'" | awk -F"'" '{print $2}')
-
 # Should have node
 lando node --version
 
@@ -46,18 +43,18 @@ lando yarn --version
 lando lagoon --version | grep lagoon
 
 # Should have a running node service
-curl -kL http://node.all-services.lndo.site:$LANDO_PORT/ | grep "LAGOON="
+curl -kL http://node.all-services.lndo.site | grep "LAGOON="
 
 # Should have a running python service
-curl -kL http://python.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
+curl -kL http://python.all-services.lndo.site | grep "lagoon/"
 
 # Should have a running ruby service
-curl -kL http://ruby.all-services.lndo.site:$LANDO_PORT/ | grep "Ruby/"
-curl -kL http://ruby.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
+curl -kL http://ruby.all-services.lndo.site | grep "Ruby/"
+curl -kL http://ruby.all-services.lndo.site| grep "lagoon/"
 
 # Should have a running basic service
-curl -kL http://basic.all-services.lndo.site:$LANDO_PORT/ | grep "basic"
-curl -kL http://basic.all-services.lndo.site:$LANDO_PORT/ | grep "lagoon/"
+curl -kL http://basic.all-services.lndo.site | grep "basic"
+curl -kL http://basic.all-services.lndo.site | grep "lagoon/"
 
 # Should have a "mycore" Solr core
 curl 'http://localhost:8983/solr/admin/cores?action=STATUS&core=mycore' | grep "mycore"
