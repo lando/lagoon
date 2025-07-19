@@ -3,7 +3,7 @@
   "description": "A Lando plugin that provides a tight integration with Lagoon.",
   "version": "1.4.0",
   "author": "Mike Pirog @pirog",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": "lando/lagoon",
   "bugs": "https://github.com/lando/lagoon/issues/new/choose",
   "homepage": "https://github.com/lando/lagoon",
