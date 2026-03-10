@@ -41,6 +41,15 @@ docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_
 docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_php_1
 docker ps --filter label=com.docker.compose.project | grep Up | grep drupalbase_cli_1
 
+# Should have built nginx and php from the cli image via CLI_IMAGE build arg
+cd drupal
+lando ssh -s cli -c "test -f /app/web/index.php"
+lando ssh -s nginx -c "test -f /app/web/index.php"
+lando ssh -s php -c "test -f /app/web/index.php"
+
+# Should not have additional_contexts in the generated compose files
+cat ~/.lando/compose/drupalbase-* 2>/dev/null | grep -c "additional_contexts" | grep 0
+
 # Should ssh against the cli container by default
 cd drupal
 lando ssh -c "env | grep LAGOON=" | grep cli-drupal
