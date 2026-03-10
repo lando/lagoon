@@ -48,7 +48,8 @@ lando ssh -s nginx -c "test -f /app/web/index.php"
 lando ssh -s php -c "test -f /app/web/index.php"
 
 # Should not have additional_contexts in the generated compose files
-cat ~/.lando/compose/drupalbase-* 2>/dev/null | grep -c "additional_contexts" | grep 0
+cd drupal
+cat ~/.lando/compose/drupalbase-* 2>/dev/null | grep "additional_contexts" && exit 1 || true
 
 # Should ssh against the cli container by default
 cd drupal
