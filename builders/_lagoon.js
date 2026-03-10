@@ -20,8 +20,11 @@ module.exports = {
       const hostnames = _.get(options, '_app.lagoon.containers', []);
 
       // Normalize the dockerfile situation
-      // We need to do this again since this isnt technically an override
-      if (_.has(lagoon, 'build.context')) lagoon.build.context = path.join(options.root);
+      // Resolve build context relative to the project root so non-root contexts
+      // (eg context: frontend) work correctly instead of always forcing root
+      if (_.has(lagoon, 'build.context')) {
+        lagoon.build.context = path.resolve(options.root, lagoon.build.context);
+      }
 
       // Handle portfoward in the usual way
       if (options.portforward) {
