@@ -25,7 +25,7 @@ services:
       lagoon.type: node
       lando.type: node
     ports:
-      - "3000"
+      - "3011:3000"
     user: root
     environment:
       << : *default-environment # loads the defined environment variables from the top
@@ -38,7 +38,7 @@ services:
       lagoon.type: python
       lando.type: python
     ports:
-      - "8800"
+      - "8811:8800"
     environment:
       << : *default-environment # loads the defined environment variables from the top
     networks:
@@ -50,7 +50,7 @@ services:
       lagoon.type: ruby
       lando.type: ruby
     ports:
-      - "3000"
+      - "3012:3000"
     environment:
       << : *default-environment # loads the defined environment variables from the top
     networks:
