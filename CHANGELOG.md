@@ -1,5 +1,13 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Resolve relative Docker build contexts against the project root instead of forcing every build to use the root directory.
+* Strip `build.additional_contexts` from local service configuration so cross-service `service:` references do not fail in Lando's split Compose files; preserve `CLI_IMAGE` build arguments.
+* Route basic services to their container ports when Compose specifies a published host port.
+* Handle numeric short-syntax proxy ports, use each basic service's own port, and preserve the root-domain route for an explicitly selected basic primary service.
+* Add isolated regression coverage for build context resolution, additional-context stripping, and proxy route generation.
+* Refresh locked runtime and documentation dependencies, including Axios, js-yaml, and the documentation theme.
+* Promote the npm `latest` tag when a prerelease is promoted to stable, waiting for the package to be available to avoid a publication race.
+
 ## v1.4.0 - [December 11, 2024](https://github.com/lando/lagoon/releases/tag/v1.4.0)
 
 * Optimized for `midcore`
