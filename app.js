@@ -100,6 +100,11 @@ module.exports = (app, lando) => {
       }
     });
 
+    // Build local image dependencies before Compose starts consumers in parallel.
+    const {buildDependencies} = require('./lib/build');
+    app.events.on('pre-start', 90, () => buildDependencies(app));
+    app.events.on('pre-rebuild', 100, () => buildDependencies(app));
+
     // Fix pullable/local services for lagoon things
     app.events.on('pre-rebuild', 9, () => {
       _.forEach(_.get(app, 'config.services', {}), (config, name) => {

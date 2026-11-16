@@ -1,6 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
 * Resolve relative Docker build contexts against the project root instead of forcing every build to use the root directory.
+* Build local service-context image dependencies before starting or rebuilding their consumers.
 * Strip `build.additional_contexts` from local service configuration so cross-service `service:` references do not fail in Lando's split Compose files; preserve `CLI_IMAGE` build arguments.
 * Route basic services to their container ports when Compose specifies a published host port.
 * Handle numeric short-syntax proxy ports, use each basic service's own port, and preserve the root-domain route for an explicitly selected basic primary service.
